@@ -103,11 +103,11 @@ GET http://localhost:3000/exercises/62e7d50233a12f3c9c53d
 // UPDATE ******************************************
 
 ###
-PUT http://localhost:3000/exercises/62e7d50233a12f3c9c53db40 HTTP/1.1
+PUT http://localhost:3000/exercises/62e8df59af5327c7dda0c412 HTTP/1.1
 content-type: application/json
 
 {
-    "name": "Bench Press",
+    "name": "Overhead Press",
     "reps": 8,
     "weight": 165,
     "unit": "lbs",

@@ -1,2 +1,4 @@
 /chicoa-backend/node_modules
+/chicoa-frontend/node_modules
 chicoa-backend/.env
+chicoa-frontend/.env

@@ -1,0 +1,132 @@
+/* 
+This style sheet can be used for reference
+but not for an assignment.
+*/
+
+/*   ----- Imports  -----  */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;900&family=Lato&display=swap');
+
+
+/* Center the body in the middle of the viewport 
+by defining min and max widths with auto right/left margins
+*/
+body {
+  background-color: #000000;
+  font-family: 'Cinzel', serif;
+  margin:0 auto;
+  min-width:400px;
+  max-width:70%;
+  text-align:center;
+}
+h1 {
+  font-size: 85px;
+  text-shadow: 2px 2px 2px #D3832B;
+}
+h2 {
+  font-size: 40px;
+  text-shadow: 2px 2px 2px #D3832B;
+  line-height: 2;
+}
+p {
+  font-size: 50px;
+  text-shadow: 2px 2px 2px #D3832B;
+  line-height: 3.7;
+}
+
+/* PAGE LAYOUT 
+Consistant design for each page layout block. 
+*/
+header, main, article, footer {
+  border-bottom:1px solid gray;
+  background-color: #D73F09;
+}
+footer {
+  height: 120px;
+}
+header {
+  background-image: url("./images/header_img.jpg");
+  height: 300px;
+}
+
+/* NAVIGATION
+Simple changes to make anchors look like buttons. 
+*/
+nav {margin: 4px 0 0 0;}
+nav a {
+  text-decoration:none;
+  background-color: gray;
+  padding:4px;
+  margin:4px;
+  color:whitesmoke;
+  font-weight:bold;
+}
+/* Reverse the colors when hovering to give the user some interaction feedback.*/
+nav a:hover {
+  background-color: whitesmoke;
+  color:gray;
+}
+
+/* TABLE */
+div.wrapper {
+  overflow:hidden;
+  overflow-y: scroll;
+  height: 700px;
+}
+table {
+  border-collapse: collapse;
+  margin:0 auto;
+}
+caption {color:slategray;}
+tr td, td th {
+  color: #ffffff;
+  font-family: 'Cinzel', serif;
+  font-family: 'Lato', sans-serif;
+  border: 1px solid gray;
+  padding: 8px;
+}
+tr:nth-child(odd){background-color:#000000;}
+tr:nth-child(even){background-color:#D3832B;}
+th {
+  color: #ffffff;
+  font-weight:normal;
+  padding: 4px;
+  background-color: #D73F09;
+}
+
+
+/* FORM */
+fieldset {
+  border:1px solid #D3832B;
+}
+legend {
+  font-size: 30px;
+  font-weight: 700;
+  height: 40px;
+  background-color:#D3832B;
+}
+label {
+  font-size: 30px;
+  font-weight: 600;
+  display:block;
+  margin-top:20px;
+}
+input {
+  padding:4px;
+}
+
+button {
+  font-family: 'Cinzel', serif;
+  font-family: 'Lato', sans-serif;
+  
+  padding:5px;
+  background-color: #7A6855;
+  color: #ffffff;
+  border:1px solid gray;
+  border-radius:3px;
+}
+button:hover {
+  background-color: whitesmoke;
+  color: gray;
+}
+
+

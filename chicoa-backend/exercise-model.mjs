@@ -30,7 +30,7 @@ const exerciseSchema = mongoose.Schema({
 	reps: { type: Number, required: true },
 	weight: { type: Number, required: true },
     unit: { type: String, required: true },
-    date: { type: String, required: true },
+    date: { type: Date, required: true },
 });
 
 // Compile the model from the schema.
