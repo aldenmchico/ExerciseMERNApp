@@ -1,0 +1,174 @@
+// CREATE ******************************************
+###
+POST http://localhost:3000/exercises HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Bench Press",
+    "reps": 4,
+    "weight": 225,
+    "unit": "lbs",
+    "date": 2
+}
+
+// INVALID REQUEST: Name is invalid
+###
+POST http://localhost:3000/exercises HTTP/1.1
+content-type: application/json
+
+{
+    "name": "",
+    "reps": 8,
+    "weight": "185",
+    "unit": "lbs",
+    "date": "08-01-22"
+}
+
+// INVALID REQUEST: Reps is invalid
+###
+POST http://localhost:3000/exercises HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Bench Press",
+    "reps": -1,
+    "weight": "185",
+    "unit": "lbs",
+    "date": "08-01-22"
+}
+
+// INVALID REQUEST: Unit is invalid
+###
+POST http://localhost:3000/exercises HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Bench Press",
+    "reps": 8,
+    "weight": "185",
+    "unit": "xxx",
+    "date": "08-01-22"
+}
+
+// INVALID REQUEST: One of the fields is missing
+###
+POST http://localhost:3000/exercises HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Bench Press",
+    "reps": 8,
+    "weight": "185",
+    "unit": "lbs"
+}
+
+###
+POST http://localhost:3000/exercises HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Bicep Curl",
+    "reps": 14,
+    "weight": "45",
+    "unit": "lbs",
+    "date": "08-01-22"
+}
+
+###
+POST http://localhost:3000/exercises HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Tricep Dip",
+    "reps": 20,
+    "weight": 15,
+    "unit": "lbs",
+    "date": "08-01-22"
+}
+
+// READ ******************************************
+
+// READ: GET Request for all documents
+###
+GET http://localhost:3000/exercises HTTP/1.1
+
+// READ: GET Request by ID
+###
+GET http://localhost:3000/exercises/62e7d50233a12f3c9c53db40
+
+// INVALID REQUEST: ID is invalid
+###
+GET http://localhost:3000/exercises/62e7d50233a12f3c9c53d
+
+// UPDATE ******************************************
+
+###
+PUT http://localhost:3000/exercises/62e7d50233a12f3c9c53db40 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Bench Press",
+    "reps": 8,
+    "weight": 165,
+    "unit": "lbs",
+    "date": "08-01-22"
+}
+
+// INVALID REQUEST: Invalid ID
+###
+PUT http://localhost:3000/exercises/62e7c5e1358a37d6a0ed86 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Bench Press",
+    "reps": 8,
+    "weight": "205",
+    "unit": "lbs",
+    "date": "08-01-22"
+}
+
+// INVALID REQUEST: Doesn't include all 5 parameters
+###
+PUT http://localhost:3000/exercises/62e7d50233a12f3c9c53db40 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Bench Press",
+    "reps": 8,
+    "weight": "205",
+    "unit": "lbs"
+}
+
+// INVALID REQUEST: Invalid input parameter
+###
+PUT http://localhost:3000/exercises/62e7d50233a12f3c9c53db40 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Bench Press",
+    "reps": 8,
+    "weight": 165,
+    "unit": "xxx",
+    "date": "08-01-22"
+}
+
+// INVALID REQUEST: One of the values is invalid
+###
+PUT http://localhost:3000/exercises/62e7c5e1358a37d6a0f9ed86 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "",
+    "reps": 8,
+    "weight": "205",
+    "unit": "lbs",
+    "date": "08-01-22"
+}
+
+// DELETE ******************************************
+###
+DELETE http://localhost:3000/exercises/62e8c042560b45c458679683 HTTP/1.1
+
+// INVALID REQUEST: ID not valid
+###
+DELETE http://localhost:3000/exercises/62e8c042560b45c45863 HTTP/1.1
