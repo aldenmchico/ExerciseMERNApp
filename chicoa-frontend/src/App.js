@@ -19,32 +19,34 @@ function App() {
   return (
     <>
       <Router>
+        <div className="container">
+          <header>
+            <h1>Track Star</h1>
+            <p className="headerDescription">Track Your Progress.</p>
+          </header>
+
+          <div className="navigation">
+            <Navigation />
+          </div>
+
+          <main>
+            <Route path="/" exact>
+              <HomePage setExercise={setExercise}/>
+            </Route>
+
+            <Route path="/edit-exercise">
+              <EditExercisePage exercise={exercise}/>
+            </Route>
+            
+            <Route path="/create-exercise">
+              <CreateExercisePage />
+            </Route>
+          </main>
         
-        <header>
-          <h1>Track Star</h1>
-          <p>Track Your Progress.</p>
-        </header>
-
-        <Navigation />
-
-        <main>
-              <Route path="/" exact>
-                <HomePage setExercise={setExercise}/>
-              </Route>
-
-              <Route path="/edit-exercise">
-                <EditExercisePage exercise={exercise}/>
-              </Route>
-              
-              <Route path="/create-exercise">
-                <CreateExercisePage />
-              </Route>
-        </main>
-      
-        <footer>
-          <p>&copy; 2022 Alden Chico</p>
-        </footer>
-
+          <footer>
+            <p>&copy; 2022 Alden Chico</p>
+          </footer>
+        </div>
       </Router>
     </>
   );

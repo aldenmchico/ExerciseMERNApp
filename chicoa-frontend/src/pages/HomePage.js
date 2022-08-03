@@ -42,15 +42,18 @@ function HomePage({setExercise}) {
     }
 
     return(
-        <>
+        <>  
             <article>
                 <h2>Recorded Exercises</h2>
+                <div className="exerciseList">
                 <ExerciseList
                     exercises={exercises}
                     editExercise={editExerciseRow}
                     deleteExercise = {deleteExerciseRow}
                 />
+                </div>
             </article>
+             
         </>
     );
 }

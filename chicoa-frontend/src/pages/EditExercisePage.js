@@ -36,7 +36,7 @@ export const EditExercisePage = ({exercise}) => {
 
     return (
         <>
-        <article>
+        <article className="editExercise">
             <h2>Edit Exercise</h2>
             <form onSubmit={(e) => { e.preventDefault();}}>
                 <fieldset>
