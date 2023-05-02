@@ -9,4 +9,8 @@ MONGODB_CONNECT_STRING='[INSERT MONGODB CONNECT STRING]' <br/>
 PORT=3000
 <br/>
 <br/>
-The MONGODB_CONNECT_STRING is personalized to an individual's account. I did not include my .env file in the repository because that would make access to my MongoDB account public. After creating the .env file, run <b>npm install</b> and <b>npm start</b> on separate terminals, open a web browser, and navigate to <b>http://localhost:3000</b>. 
+The MONGODB_CONNECT_STRING is personalized to an individual's account. I did not include my .env file in the repository because that would make access to my MongoDB account public, but you are free to use a MongoDB Connect String from your personal account. 
+</br><br/>
+After creating the .env file and linking your MongoDB connect string, open a new terminal window, navigate to the chicoa-backend directory and run <b>npm init</b> and <b>npm start</b> to download all the dependencies for the backend code and start the server on <b>localhost:3000</b>. 
+</br><br/>
+After starting the server, open another terminal window, navigate to the chicoa-frontend directory and run <b>npm init</b> and <b>npm start</b> to download all the dependencies for the frontend code and start the website on localhost:8000. Open a web browser and navigate to <b>http://localhost:8000</b> to start using the website. 
